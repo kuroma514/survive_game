@@ -132,6 +132,21 @@ class Player(pygame.sprite.Sprite):
 
         self.game_timer = 0
         self.game_time = 0
+        self.HP -= 4
+
+    def GameOver(self):
+        if self.HP == 0:
+            rect = pygame.Rect((100, 100, 600, 200))
+            pygame.draw.rect(self.screen, BLACK, rect)
+            pygame.draw.rect(self.screen, WHITE, rect, 2)
+
+            font_size = 32
+            font = pygame.font.Font(None, font_size)  # デフォルトフォントを使用
+            text = font.render("Game Over", True, WHITE)
+            text_rect = text.get_rect(center=rect.center)
+
+            self.screen.blit(text, text_rect)
+            self.game_pose = True
 
     def status_update(self):
         self.AT = self.initial_AT * self.AT_level
@@ -272,12 +287,8 @@ class Player(pygame.sprite.Sprite):
         text_surface = font.render(f"{self.Far}/450 m", True, (255, 255, 255))
         self.screen.blit(text_surface, (690, 10))
         self.game_time = self.game_timer // 60
-        game_time_minutes = 0
-        if self.game_time == 60:
-            self.game_time = 0
-            game_time_minutes += 1
         time_surface = font.render(
-            f"{game_time_minutes}：{self.game_time}", True, (255, 255, 255))
+            f"{self.game_time}", True, (255, 255, 255))
         self.screen.blit(time_surface, (720, 30))
 
     def SpawnPopSet(self):
@@ -459,5 +470,6 @@ class Player(pygame.sprite.Sprite):
         self.timer += 1
         self.enemy_group.update()
         self.enemy_group.draw(self.screen)
+        self.GameOver()
         if self.game_pose == False:
             self.game_timer += 1

@@ -283,60 +283,60 @@ class LevelSystem:
                         if self.BeamLevel == 0:
                             self.player.weapon_manager.add_weapon(
                                 "Beam", 4000, 40, 3, 1)
-                            skill["description"] = "ビームのレベルが上昇し、与えるダメージの基礎値が25増加"
+                            skill["description"] = "ビームのレベルが上昇し、与えるダメージの基礎値が20増加"
                         elif self.BeamLevel == 1:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 4000, 65, 3, 1)
+                                "Beam", 4000, 60, 3, 1)
                             skill["description"] = "ビームのレベルが上昇し、クールタイムの基礎値が0.8秒減少"
                         elif self.BeamLevel == 2:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 3200, 65, 2, 1)
+                                "Beam", 3200, 60, 2, 1)
                             skill["description"] = "ビームのレベルが上昇し、攻撃範囲の基礎値が30%上昇"
                         elif self.BeamLevel == 3:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 3200, 65, 2, 1.3)
+                                "Beam", 3200, 60, 2, 1.3)
                             skill["description"] = "ビームのレベルが上昇し、攻撃の基礎値が20上昇"
                         elif self.BeamLevel == 4:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 3200, 85, 2, 1.3)
+                                "Beam", 3200, 80, 2, 1.3)
                             skill["description"] = "ビームのレベルが上昇し、クールタイムの基礎値が0.6秒減少"
                         elif self.BeamLevel == 5:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 2600, 85, 2, 1.3)
+                                "Beam", 2600, 80, 2, 1.3)
                             skill["description"] = "ビームのレベルが上昇し、攻撃範囲の基礎値が30%上昇"
                         elif self.BeamLevel == 6:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 2600, 85, 2, 1.6)
-                            skill["description"] = "ビームのレベルが上昇し、攻撃の基礎値が20上昇"
+                                "Beam", 2600, 80, 2, 1.6)
+                            skill["description"] = "ビームのレベルが上昇し、攻撃の基礎値が10上昇"
                         elif self.BeamLevel == 7:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 2600, 105, 2, 1.6)
+                                "Beam", 2600, 90, 2, 1.6)
                             skill["description"] = "ビームのレベルが上昇し、クールタイムの基礎値が0.5秒減少"
                         elif self.BeamLevel == 8:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 2100, 105, 2, 1.6)
-                            skill["description"] = "ビームのレベルが上昇し、攻撃範囲の基礎値が40%上昇し、さらに攻撃が25上昇"
+                                "Beam", 2100, 90, 2, 1.6)
+                            skill["description"] = "ビームのレベルが上昇し、攻撃範囲の基礎値が40%上昇し、さらに攻撃が15上昇"
                         elif self.BeamLevel == 9:
                             self.player.weapon_manager.remove_weapon(
                                 "Beam")
                             self.player.weapon_manager.add_weapon(
-                                "Beam", 2100, 110, 2, 2)
+                                "Beam", 2100, 105, 2, 2)
                             skill["description"] = "これ以上レベルは上がらない"
 
                         self.BeamLevel += 1

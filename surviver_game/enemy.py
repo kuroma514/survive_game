@@ -117,7 +117,6 @@ class Enemy(pygame.sprite.Sprite):  # 敵の親クラス
         self.frame += 1
         self.enemy_scroll()
         self.enemy_image_update()
-
         self.camera_y = self.player.camera_y
 
 
