@@ -55,16 +55,17 @@ for i in range(8):
     cut_image = image_date.subsurface(
         pygame.Rect(image_pose, image_cut_size))
     reaper_image_list.append(cut_image)
+
 # ゴーレム画像切り取り
 image_date = pygame.image.load(
     f'mono/image/enemy/Golem.png')
-reaper_image_list = []
-for i in range(8):
-    image_pose = pygame.Vector2(i*88 + 24, 24)
+Golem_image_list = []
+for i in range(10):
+    image_pose = pygame.Vector2(i*90 + 24, 24)
     image_cut_size = pygame.Vector2(40, 40)
     cut_image = image_date.subsurface(
         pygame.Rect(image_pose, image_cut_size))
-    reaper_image_list.append(cut_image)
+    Golem_image_list.append(cut_image)
 
 # 赤の弾画像切り取り
 image_date = pygame.image.load(

@@ -132,7 +132,6 @@ class Player(pygame.sprite.Sprite):
 
         self.game_timer = 0
         self.game_time = 0
-        self.HP -= 4
 
     def GameOver(self):
         if self.HP == 0:
@@ -143,6 +142,20 @@ class Player(pygame.sprite.Sprite):
             font_size = 32
             font = pygame.font.Font(None, font_size)  # デフォルトフォントを使用
             text = font.render("Game Over", True, WHITE)
+            text_rect = text.get_rect(center=rect.center)
+
+            self.screen.blit(text, text_rect)
+            self.game_pose = True
+
+    def GameClear(self):
+        if self.Far >= 450:
+            rect = pygame.Rect((100, 100, 600, 200))
+            pygame.draw.rect(self.screen, BLACK, rect)
+            pygame.draw.rect(self.screen, WHITE, rect, 2)
+
+            font_size = 32
+            font = pygame.font.Font(None, font_size)  # デフォルトフォントを使用
+            text = font.render("Game Clear", True, WHITE)
             text_rect = text.get_rect(center=rect.center)
 
             self.screen.blit(text, text_rect)
@@ -471,5 +484,6 @@ class Player(pygame.sprite.Sprite):
         self.enemy_group.update()
         self.enemy_group.draw(self.screen)
         self.GameOver()
+        self.GameClear()
         if self.game_pose == False:
             self.game_timer += 1

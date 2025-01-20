@@ -48,7 +48,7 @@ class Enemy(pygame.sprite.Sprite):  # 敵の親クラス
             self.index_max = 8
         if enemy_num == "Golem":
             self.enemy_size = pygame.Vector2(48, 48)
-            self.image_list = reaper_image_list
+            self.image_list = Golem_image_list
             self.index_max = 10
 
         self.pre_image = self.image_list[self.index]
