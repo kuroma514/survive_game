@@ -1,5 +1,4 @@
 import pygame
-import pygame_gui
 import math
 import random
 from setting import *
@@ -318,7 +317,7 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 100, 1,
-                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 20)
+                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 35)
             elif self.Far <= 70 and self.SpawnTimer == 180:
                 SpawnNum1 = self.Far//10
                 SpawnNum2 = self.Far//20
@@ -326,11 +325,11 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum1):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 100, 1,
-                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 20)
+                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 35)
                 for i in range(SpawnNum2):
                     self.SpawnPopSet()
                     self.enemy = Longrange(self.enemy_group, 200, 0.7,
-                                           "ScaryBat", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 40, 5)
+                                           "ScaryBat", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 50, 5)
 
             elif self.Far <= 120 and self.SpawnTimer == 180:
                 SpawnNum1 = (self.Far - 50) // 10
@@ -340,7 +339,7 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum3):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 100, 1,
-                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 20)
+                                            'suraimu', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 35)
                 for i in range(SpawnNum1):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 300, 1.5,
@@ -348,7 +347,7 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum2):
                     self.SpawnPopSet()
                     self.enemy = Longrange(self.enemy_group, 200, 0.7,
-                                           "ScaryBat", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 40, 5)
+                                           "ScaryBat", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 50, 5)
             elif self.Far <= 170 and self.SpawnTimer == 180:
                 SpawnNum1 = (self.Far - 100) // 10 + 3
                 SpawnNum2 = (self.Far - 100) // 20
@@ -377,7 +376,7 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum3):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 600, 2.5,
-                                            'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 250)
+                                            'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 200)
             elif self.Far <= 280 and self.SpawnTimer == 180:
                 SpawnNum1 = (self.Far - 180) // 10
                 SpawnNum2 = (self.Far - 180) // 15
@@ -387,17 +386,17 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum1):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 300, 1.7,
-                                            'frog', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 50)
+                                            'frog', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 70)
                 for i in range(SpawnNum2):
                     self.SpawnPopSet()
                     self.enemy = Longrange(self.enemy_group, 400, 2,
-                                           "mush", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 60, 4)
+                                           "mush", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 100, 4)
                 for i in range(SpawnNum3):
                     random_number = random.randint(0, 1)
                     if random_number == 1:
                         self.SpawnPopSet()
                         self.enemy = Shortrange(self.enemy_group, 600, 2.5,
-                                                'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 100)
+                                                'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 200)
                 for i in range(SpawnNum4):
                     random_number = random.randint(0, 1)
                     if random_number == 1:
@@ -413,15 +412,15 @@ class Player(pygame.sprite.Sprite):
                 for i in range(SpawnNum1):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 300, 1.7,
-                                            'frog', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 50)
+                                            'frog', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 70)
                 for i in range(SpawnNum2):
                     self.SpawnPopSet()
                     self.enemy = Longrange(self.enemy_group, 400, 2,
-                                           "mush", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 60, 4)
+                                           "mush", self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 80, 4)
                 for i in range(SpawnNum3):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 600, 2.5,
-                                            'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 100)
+                                            'reaper', self, self.enemy_group, self.SpawnPopX, -self.SpawnPopY, 200)
                 for i in range(SpawnNum4):
                     self.SpawnPopSet()
                     self.enemy = Shortrange(self.enemy_group, 1000, 1,

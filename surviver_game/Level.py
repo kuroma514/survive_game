@@ -209,12 +209,12 @@ class LevelSystem:
                                 "Syuriken")
                             self.player.weapon_manager.add_weapon(
                                 "Syuriken", 700, 90, 5.3, 1)
-                            skill["description"] = "手裏剣のレベルが上昇し、攻撃が20上昇し、さらにクールタイムの基礎値が0.3秒減少し、さらに発射速度の基礎値が50%上昇"
+                            skill["description"] = "手裏剣のレベルが上昇し、攻撃が20上昇し、さらにクールタイムの基礎値が0.5秒減少し、さらに発射速度の基礎値が50%上昇"
                         elif self.SyurikenLevel == 8:
                             self.player.weapon_manager.remove_weapon(
                                 "Syuriken")
                             self.player.weapon_manager.add_weapon(
-                                "Syuriken", 400, 110, 5.3, 1)
+                                "Syuriken", 200, 110, 5.3, 1)
                             skill["description"] = "これ以上レベルは上がらない"
 
                         self.SyurikenLevel += 1
@@ -426,7 +426,7 @@ class LevelSystem:
     def level_up(self):
         self.level += 1
         self.PressAmout = 0
-        self.experience_to_next_level = (self.level * self.level) + 20
+        self.experience_to_next_level = (self.level * self.level) + 50
         self.selection = True
         self.selected_skills = random.sample(self.skills, 3)
         self.player.game_pose = True
